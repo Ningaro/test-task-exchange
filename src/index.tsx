@@ -8,6 +8,9 @@ import store from './redux/store'
 // root screen
 import Root from './screens/Root'
 
+// Styles
+import './styles.scss'
+
 const root = createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <StrictMode>

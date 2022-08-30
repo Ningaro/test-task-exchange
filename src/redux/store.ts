@@ -3,7 +3,7 @@ import exchangeReducer from './reducers/exchangeSlice'
 
 const store = configureStore({
   reducer: {
-    exchangeReducer,
+    exchange: exchangeReducer,
   },
 })
 

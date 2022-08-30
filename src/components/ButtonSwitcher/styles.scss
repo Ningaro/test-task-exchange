@@ -1,0 +1,30 @@
+@import '../../styles/_vars.scss';
+
+.button {
+  transition: all 0.1s linear;
+  border-radius: $radius-md;
+  border-width: 0;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+.button-solid {
+  background-color: $pink-100;
+  color: $white;
+}
+
+.button-solid:hover {
+  background-color: $pink-50;
+}
+
+.button-hide {
+  background-color: transparent;
+  color: $black;
+}
+
+.button-hide:hover {
+  background-color: $pink-25;
+}

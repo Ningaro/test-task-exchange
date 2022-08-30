@@ -1,0 +1,27 @@
+@import '../../styles/_vars.scss';
+
+.select-with-input {
+  display: flex;
+}
+
+@mixin select-with-input-childrens {
+  padding: 0.5em;
+  border-width: 0;
+  background-color: $gray-50;
+  color: $gray-500;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.input {
+  @include select-with-input-childrens;
+  flex: 8;
+  border-radius: $radius-md 0px 0px $radius-md;
+}
+
+.select {
+  @include select-with-input-childrens;
+  flex: 6;
+  border-radius: 0 $radius-md $radius-md 0;
+}

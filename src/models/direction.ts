@@ -1,4 +1,6 @@
+import { AllT } from './categories'
+
 export interface IDirection {
-  code: string
+  code: AllT
   name: string
 }

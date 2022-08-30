@@ -1,0 +1,19 @@
+$spacing: 1em;
+
+.stack {
+  display: flex;
+}
+
+.stack-v {
+  flex-direction: column;
+  & > *:not(:first-child) {
+    margin-top: $spacing;
+  }
+}
+
+.stack-h {
+  flex-direction: row;
+  & > *:not(:first-child) {
+    margin-left: $spacing;
+  }
+}

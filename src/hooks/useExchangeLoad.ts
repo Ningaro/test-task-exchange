@@ -11,6 +11,8 @@ import {
 import { IFilter } from '../models/filters'
 import { IDirection } from '../models/direction'
 
+const PUBLIC_URL = process.env.PUBLIC_URL
+
 export default function useExchangeLoad() {
   const dispatch = useMyDispatch()
   useEffect(() => {
@@ -20,14 +22,17 @@ export default function useExchangeLoad() {
 
       // Получаем данные
       const { data: filters } = await axios.get<IFilter[]>(
-        'http://localhost:3000/mockData/filters.json'
+        `${PUBLIC_URL}/mockData/filters.json`
       )
       const { data: directions } = await axios.get<IDirection[]>(
-        'http://localhost:3000/mockData/directions.json'
+        `${PUBLIC_URL}/mockData/directions.json`
       )
 
       // Записываем данные
-      dispatch(exchangeLoadingOk({ filters, directions }))
+      setTimeout(
+        () => dispatch(exchangeLoadingOk({ filters, directions })),
+        2000
+      )
     }
 
     fetchData().catch(() => dispatch(exchangeLoadingError()))
